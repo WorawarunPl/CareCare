@@ -1,0 +1,122 @@
+.main-container {
+  text-align: center;
+  margin-top: 50px;
+}
+.main-emotion-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main-empty-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.main-date-number {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.main-navigate-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 19px;
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+  color: #000;
+  border: 4px solid #fff; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-calendar-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.main-calendar-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.main-selected-month h2 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.main-calendar-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.main-calendar-table th,
+.main-calendar-table td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.main-calendar-table th {
+  font-size: 15px; 
+  font-weight: bold;
+  color: #000;
+}
+
+.main-date-number {
+  text-align: center;
+  font-size: 16px;
+}
+
+.main-day {
+  background-color: #fff;
+}
+
+.main-empty {
+  background-color: #fff;
+}
+
+.main-empty-circle {
+  width: 30px;
+  height: 30px;
+  border: 1px dashed #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    height: 750px;
+    margin-top: -5px;
+  }
+  .main-calendar-table th {
+  font-size: 20px; 
+  font-weight: bold;
+  color: #000;
+}
+.main-calendar-icon img {
+  width: 60px;
+  height: 60px;
+}
+.main-selected-month h2 {
+  margin: 10px 0;
+  font-size: 40px;
+}
+.main-calendar-icon {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+}

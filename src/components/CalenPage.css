@@ -1,0 +1,125 @@
+/* CalenPage.css */
+.calen-calendar-container {
+  /* padding: 10px;
+  background-color: #f9f9f9; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.year-section {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.year-title {
+  font-size: 45px; 
+  font-weight: bold;
+  text-align: left;
+}
+
+.horizontal-line-record {
+  border-top: 2px solid #ccc;
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(4, auto); 
+  gap: 10px; 
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+.month-box {
+  width: 100%;
+  max-width: 200px; 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2px;
+}
+
+.selected-month {
+  border: 5px solid;
+  border-radius: 8px;  
+  border-image: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea) 1;
+}
+
+.month-title {
+  font-size: 10px; 
+  font-weight: bold;
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+  border-radius: 6px;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: 15%; 
+  text-align: center;
+  padding: 2px; 
+  font-size: 8px; 
+  border: 1px solid #fff;
+}
+
+
+.calendar-table .day {
+  background-color: #fff;
+}
+
+.calendar-table .empty {
+  background-color: #fff;
+}
+
+.calen-calendar-container {
+  transform: scale(1); 
+  transform-origin: top center; 
+}
+
+@media screen and (min-width: 1024px) {
+  .calen-calendar-container {
+    height: 3100px;
+    transform: scale(1); 
+    margin-bottom: 50px;
+  }
+
+  .year-title {
+    font-size: 60px; 
+    margin-top: 10px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+  }
+
+  .month-box {
+    max-width: 250px; 
+    padding: 5px;
+  }
+
+  .month-title {
+    font-size: 24px; 
+    margin-bottom: 6px; 
+  }
+
+  .calendar-table th,
+  .calendar-table td {
+    width: 20%;
+    font-size: 12px; 
+    padding: 5px; 
+  }
+}

@@ -1,0 +1,245 @@
+.daily-container {
+  margin-bottom: 100px;
+}
+.dropdown {
+  padding: 10px;
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+  color: #000;
+  border: 4px solid #fff; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 19px;
+  font-size: 20px;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.dropdown-container select option {
+  font-size: 12px;
+}
+/* edit delete icon*/
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  gap: 10px;
+  top: -35px;
+  right: 8px;
+}
+
+/* Emotion Box Styles */
+.emotion-box {
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  justify-content: space-between;
+  z-index: 0;
+  overflow: visible;
+  isolation: auto;
+  margin-bottom: 55px;
+}
+
+.emotion-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+  border-radius: 19px;
+  padding: 5px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  box-sizing: border-box;
+}
+
+.emotion-box .left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 10px;
+  border-right: 2px solid #d9d9d9;
+}
+
+.emotion-box .left-side p {
+  padding: 5px 10px;
+  background-color: #ececec;
+  border-radius: 19px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.emotion-box .left-side img {
+  width: 50px;
+  height: 50px;
+}
+
+.emotion-box .right-side {
+  flex: 3;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.emotion-box .right-side p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.emotion-box .right-side .images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.emotion-box .right-side .images-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.emotion-wrapper {
+  margin-bottom: 5px;
+  position: relative;
+  overflow: visible;
+}
+
+.edit-button img,
+.delete-button img {
+  width: 20px; 
+  height: 20px;
+}
+
+.edit-button,
+.delete-button {
+  background: none; 
+  border: none; 
+  cursor: pointer;
+  padding: 4px; 
+  border-radius: 100px;
+}
+
+.edit-button:hover {
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);;
+}
+
+.delete-button:hover {
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+}
+
+.delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.confirm-button,
+.cancel-button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 19px;
+}
+
+.confirm-button {
+  background: linear-gradient(to right, #f6d6d6, #f6f7c4, #a1eebd, #7bd3ea);
+  color: #000;
+}
+
+.cancel-button {
+  background-color: #b5b3b3;
+  color: white;
+}
+
+textarea{
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1024px){
+  .emotion-box{
+      margin-bottom: 70px;
+  }
+  .emotion-box .right-side .images-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit:cover;
+}
+
+.emotion-box .right-side .images-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+.emotion-box .left-side p {
+  padding: 5px 10px;
+  background-color: #ececec;
+  border-radius: 19px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.emotion-box .left-side img {
+  width: 80px;
+  height: 80px;
+}
+.dropdown{
+  width: 300px;
+  text-align: center;
+}
+.emotion-box .right-side p {
+  font-size: 20px;
+}
+textarea{
+  resize: both;
+  width: 100%;
+  min-height: 70px;
+  font-size: 18px;
+}
+.edit-button img,
+.delete-button img {
+  width: 25px; 
+  height: 25px;
+}
+.actions-container{
+    top: -40px;
+}
+
+}

@@ -194,16 +194,18 @@ const InfoPage = () => {
       .slice(0, 7);
 
     axios
-      .get(`https://api.yourkhqr.cloud/emotions/stats/${formattedDate}`)
+      .get(
+        `https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/stats/${formattedDate}`,
+      )
       .then((res) => {
         const apiData = res.data.data;
 
         apiData.sort(
-          (a, b) => new Date(a.emotion_date) - new Date(b.emotion_date)
+          (a, b) => new Date(a.emotion_date) - new Date(b.emotion_date),
         );
 
         const allLabels = apiData.map((entry) =>
-          new Date(entry.emotion_date).toLocaleDateString("en-GB")
+          new Date(entry.emotion_date).toLocaleDateString("en-GB"),
         );
 
         const allData = apiData.map((entry) => {
@@ -229,8 +231,8 @@ const InfoPage = () => {
           (day) =>
             `${day.padStart(2, "0")}/${dateSelect.slice(
               5,
-              7
-            )}/${dateSelect.slice(0, 4)}`
+              7,
+            )}/${dateSelect.slice(0, 4)}`,
         );
 
         setChartData({

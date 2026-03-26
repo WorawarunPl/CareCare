@@ -33,7 +33,9 @@ const DailyPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.yourkhqr.cloud/emotions/all")
+      .get(
+        "https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/all",
+      )
       .then((res) => {
         setEmotionData(res.data);
       })
@@ -62,12 +64,15 @@ const DailyPage = () => {
     };
 
     axios
-      .put(`https://api.yourkhqr.cloud/emotions/${id}`, updatedData)
+      .put(
+        `https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/${id}`,
+        updatedData,
+      )
       .then(() => {
         setEmotionData((prevData) =>
           prevData.map((entry) =>
-            entry.id === id ? { ...entry, note: updatedNote } : entry
-          )
+            entry.id === id ? { ...entry, note: updatedNote } : entry,
+          ),
         );
         setEditingId(null);
       })
@@ -78,10 +83,12 @@ const DailyPage = () => {
 
   const handleDelete = () => {
     axios
-      .delete(`https://api.yourkhqr.cloud/emotions/${deleteId}`)
+      .delete(
+        `https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/${deleteId}`,
+      )
       .then(() => {
         setEmotionData((prevData) =>
-          prevData.filter((entry) => entry.id !== deleteId)
+          prevData.filter((entry) => entry.id !== deleteId),
         );
         setShowDeleteModal(false);
       })

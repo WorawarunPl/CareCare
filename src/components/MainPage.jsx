@@ -91,7 +91,9 @@ const MainPage = () => {
 
   const getAllDataEmotions = () => {
     axios
-      .get(`https://api.yourkhqr.cloud/emotions/all`)
+      .get(
+        `https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/all`,
+      )
       .then((res) => {
         setEmotionData(res.data);
       })

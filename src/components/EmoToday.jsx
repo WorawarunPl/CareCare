@@ -121,16 +121,20 @@ function sentDataToServer() {
   const formattedDate = new Date(selectedDate).toISOString().split("T")[0]; // "2024-12-21"
   console.log("before sent to server " , savedImages)
   axios
-    .post(`https://api.yourkhqr.cloud/emotions/create`, {
-      emotion_icon: emojiLabel,
-      emotion_date: formattedDate, // Use formatted date here
-      note: noteText,
-      base64_images: savedImages,
-    },{
-      headers :{
-        "Content-Type" : "multipart/form-data"
-      }
-    })
+    .post(
+      `https://3c55-2001-44c8-6742-8a03-fccb-85db-60f-91cc.ngrok-free.app/emotions/create`,
+      {
+        emotion_icon: emojiLabel,
+        emotion_date: formattedDate, // Use formatted date here
+        note: noteText,
+        base64_images: savedImages,
+      },
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      },
+    )
     .then((res) => {
       console.log(res.data);
       //Swal.fire(`Uploaded Data`, ``, `success`);

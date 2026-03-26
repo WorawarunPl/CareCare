@@ -151,7 +151,7 @@ const DailyPage = () => {
           onChange={(e) => setSelectedYear(e.target.value)}
           className="dropdown"
         >
-          {["2024", "2025"].map((year) => (
+          {["2024", "2025", "2026"].map((year) => (
             <option key={year} value={year}>
               {year}
             </option>
